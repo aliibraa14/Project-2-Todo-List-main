@@ -3,8 +3,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 export default function Login(props) {
-  const [email, setEmail] = useState("m.jouza3@gmail.com");
-  const [password, setPassword] = useState("1234");
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
 
   const loginFunc = (e) => {
     e.preventDefault();
@@ -48,7 +48,7 @@ export default function Login(props) {
           placeholder="Write password here ..."
         />
         <br />
-        <input type="submit" value="Login" onClick={loginFunc} />
+        <input type="submit" value="Login" onClick={loginFunc} className="btn btn-primary" />
         <Link to="/Register">Don't Have An Account?</Link>
       </form>
     </div>
