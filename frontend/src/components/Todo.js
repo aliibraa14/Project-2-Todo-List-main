@@ -25,6 +25,7 @@ export default function Todo(props) {
         >
           <i class="bi bi-trash-fill"></i>
         </button>
+        
       </label>
     </div>
   );

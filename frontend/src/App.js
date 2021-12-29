@@ -187,10 +187,10 @@ export default function App() {
             <div className="Home m-3">
               <div className="Home mb-3 text-center">
                 {/* click on button should bring all Data */}
-                <button onClick={getData} class="btn btn-primary m-2">
+                <button onClick={getData} class="btn btn-outline-primary m-2">
                   GET TASKS
                 </button>
-                <button onClick={deleteTasks} class="btn btn-danger m-2">
+                <button onClick={deleteTasks} class="btn btn-outline-danger m-2">
                   DELETE Completed Tasks{" "}
                 </button>
                 <button
@@ -201,6 +201,7 @@ export default function App() {
                 >
                   GET DONE
                 </button>
+                
                 <button
                   onClick={() => {
                     filterData(false);
@@ -209,13 +210,17 @@ export default function App() {
                 >
                   GET PENDING
                 </button>
+              
+              
+              <selectall />
               </div>
-
-              <Add createFunc={postNewTodo} />
+              <Add  createFunc={postNewTodo} />
               <div class="list-group">{mapOverTasks}</div>
             </div>
           }
         />
+
+
         <Route
           path="/login"
           element={
