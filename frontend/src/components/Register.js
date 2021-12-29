@@ -28,39 +28,45 @@ export default function Register() {
   };
 
   return (
-    <div className="Register">
-      <form action="">
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
+    <div className="m-3 Login d-flex justify-content-center">
+      <form action="" className="d-grid gap-3">
+      <div className="form-floating ">
+        <input 
+          type="email" className="form-control"
           placeholder="Write email here ..."
           onChange={(e) => {
             setEmail(e.target.value);
           }}
           value={email}
         />
-        <br />
-        <label htmlFor="password">Password:</label>
+        <label htmlFor="floatingInput">Email address</label>
+       </div><div className="form-floating ">
+        <label htmlFor="floatingInput">Password:</label>
         <input
           type="password"
+          className="form-control"
           placeholder="Write password here ..."
           onChange={(e) => {
             setPassword(e.target.value);
           }}
           value={password}
         />
-        <br />
-        <label htmlFor="username">Username:</label>
+        </div>
+        <div className="form-floating ">
+        <label htmlFor="floatingInput">Username:</label>
         <input
           type="text"
+          className="form-control"
           placeholder="Write username here ..."
           onChange={(e) => {
             setUsername(e.target.value);
           }}
           value={username}
         />
-        <br />
-        <input type="submit" value="Register" onClick={registerFunc} className="btn btn-success" />
+        </div>
+    <input type="submit" value="Register" className="btn btn-primary" onClick={registerFunc} 
+        // className="btn btn-secondary" 
+        />
         <Link to='/login'>Have An Account?</Link>
       </form>
     </div>
